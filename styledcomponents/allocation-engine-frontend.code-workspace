@@ -1,0 +1,31 @@
+{
+	"folders": [
+		{
+			"path": "../../allocation-engine-frontend"
+		},
+		{
+			"path": "../../portfolio-site"
+		},
+		{
+			"path": "../../portfolio-new"
+		},
+		{
+			"path": "../../yb-style-provider"
+		},
+		{
+			"path": "../../video"
+		},
+		{
+			"path": "../../vivwebmp"
+		},
+		{
+			"path": "../../test2-selfie"
+		},
+		{
+			"path": "../../wintwealth"
+		},
+		{
+			"path": ".."
+		}
+	]
+}
