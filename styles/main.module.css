@@ -1,0 +1,11 @@
+.mainRoot{
+    margin:34px 40px;
+}
+.mainBanner{
+    margin:34px 0;
+    cursor: pointer;
+}
+.mainInner{
+    display: flex;
+    flex-direction: row;
+}

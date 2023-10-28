@@ -1,0 +1,113 @@
+.cardRoot{
+    background-color: #161616; 
+    width: 648px;
+    height:100%;
+    border-radius: 16px;
+    padding:0 0 25px 0;
+}
+.cardHeading{
+    font-family: Gilroy;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 33px 24px;
+}
+.matchDetailRoot{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:0 24px;
+    cursor: pointer;
+
+}
+.matchDetailText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:0 0 0 12px;
+}
+.matchDetailHeading{
+    color:#FFFFFF;
+    font-family: Gilroy;
+    font-size: 16px;
+    font-weight: normal;
+}
+.matchDetailSubText{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.matchDetailSubTitle{
+    color:rgba(255, 255, 255, 0.60);
+    font-family: Gilroy;
+    font-size: 14px;
+    font-weight: 400;
+    
+}
+.matchDetaiLeadingElement{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.cardScoreList{
+    border-radius: 8px;
+    border: 1px solid #292929;
+    background-color: #161616;
+    margin:16px 24px;
+    
+}
+.listTileRoot{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #292929;
+    padding: 0 0 16px 0;
+    
+}
+.listTileTeam{
+    display: flex;
+    flex-direction: row;
+    margin:0 61px 0 0;
+
+}
+.pillRoot{
+    display: flex;
+    flex-direction: row;
+    border-radius: 50px;
+    background-color: #292929;
+    padding:2px 9px;
+}
+.pillNumber{
+    margin:0 6px;
+    font-family: Gilroy;
+    font-size: 14px;
+    font-weight: 500;
+}
+.listTileTeamText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Gilroy;
+    font-size: 14px;
+    font-weight: 500;
+    margin:0 0 0 4px;
+}
+.listTileTime{
+    font-family: Gilroy;
+    font-size: 14px;
+    font-weight: 500;
+    margin:0 32px 0 0;
+}
+.listTileStar{
+    margin:0 24px 0 0;
+}
+.listTilePill{
+    margin:0 52px 0 0;
+}
+.listTileTraling1{
+    margin:0 16px 0 0;
+}
+.listTileWrapper{
+    padding:16px 16px;
+   
+}

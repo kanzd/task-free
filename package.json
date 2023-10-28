@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@svgr/webpack": "^8.1.0",
     "next": "14.0.0",
+    "next-images": "^1.8.5",
     "react": "^18",
     "react-dom": "^18",
     "styled-components": "^6.1.0"
