@@ -49,13 +49,7 @@
     justify-content: space-between;
 
 }
-.cardScoreList{
-    border-radius: 8px;
-    border: 1px solid #292929;
-    background-color: #161616;
-    margin:16px 24px;
-    
-}
+
 .listTileRoot{
     display: flex;
     flex-direction: row;
@@ -100,12 +94,14 @@
 }
 .listTileStar{
     margin:0 24px 0 0;
+    cursor: pointer;
 }
 .listTilePill{
     margin:0 52px 0 0;
 }
 .listTileTraling1{
     margin:0 16px 0 0;
+    cursor: pointer;
 }
 .listTileWrapper{
     padding:16px 16px;

@@ -38,7 +38,7 @@ export default function Navbar({}:NavbarProps) {
         </div>
         <div className={Styles.navbarAvatar}>
             <div>
-                <Image src={Avatar} height={48} width={48}></Image>
+                <Image src={Avatar} height={48} width={48} alt={''}></Image>
             </div>
             <div className={Styles.userWrapper}>
                 <div className={Styles.userHeading}>
@@ -49,7 +49,7 @@ export default function Navbar({}:NavbarProps) {
                 </div>
             </div>
             <div className={Styles.navbarAvatarTraling}>
-                <Image src={UpArrow} height={24} width={24}></Image>
+                <Image src={UpArrow} height={24} width={24} alt={''}></Image>
             </div>
         </div>
         </div>
