@@ -45,12 +45,12 @@ export const MatchDetailSubText = styled.div`
   justify-content: space-around;
 `;
 
-export const MatchDetailSubTitle = styled.div`
+export const MatchDetailSubTitle:any = styled.div`
   color: rgba(255, 255, 255, 0.60);
   font-family: Gilroy;
   font-size: 14px;
   font-weight: 400;
-  margin: ${props => props?.side==="right" ? "0 8px 0 0" : "0 0 0 8px"}
+  margin: ${(props:any) => props?.side==="right" ? "0 8px 0 0" : "0 0 0 8px"}
 `;
 
 export const MatchDetailLeadingElement = styled.div`
@@ -59,14 +59,13 @@ export const MatchDetailLeadingElement = styled.div`
   justify-content: space-between;
 `;
 
-// ListTile styles
-export const ListTileRoot = styled.div`
+export const ListTileRoot:any = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   border-bottom: 1px solid #292929;
   padding: 0 0 16px 0;
-  border-width:${props => props?.border ? "1px" : "0px"}
+  border-width:${(props:any) => props?.border ? "1px" : "0px"}
 `;
 
 export const ListTileTeam = styled.div`

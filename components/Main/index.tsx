@@ -29,7 +29,7 @@ export default function Main({ }: MainProps) {
     const [isActive1, setIsActive] = useState(true);
     const [isActive2, setIsActive2] = useState(true);
     const { currentOption, setCurrentOption } = useContext(RootContext);
-    const leagueMap = useMemo(() => ({
+    const leagueMap:any = useMemo(() => ({
         livematch: {
             option1: {
                 team1Name: "Barcelona",
@@ -149,6 +149,7 @@ export default function Main({ }: MainProps) {
                     <div>
                         <Styled.NewsPanel>
                             <Image src={LatestNews} height={460} width={360} alt=''></Image>
+
                         </Styled.NewsPanel>
                     </div>
                 </Styled.MainInner2>

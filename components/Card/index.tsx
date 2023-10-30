@@ -16,8 +16,9 @@ import { RootContext } from '@/pages/home';
 import * as Styled from "./styled";
 interface CardProps {
     onGraphClick: any;
-    Card1: React.ReactElement | React.ReactElement[],
-    Card2: React.ReactElement | React.ReactElement[],
+    Card1: React.ReactElement | React.ReactElement[] | any,
+    Card2: React.ReactElement | React.ReactElement[] | any,
+    children?: React.ReactElement | React.ReactElement[]
 };
 interface CardDetailProps {
     logo: string;

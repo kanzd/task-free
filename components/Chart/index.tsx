@@ -43,7 +43,7 @@ export const options = {
         },
         tooltips: {
             callbacks: {
-                label: function (tooltipItem) {
+                label: function (tooltipItem:any) {
                     return tooltipItem.yLabel;
                 }
             }
@@ -109,7 +109,7 @@ export default function Chart({ }: ChartProps) {
     const ref = useRef();
     const arbitaryLine = {
         id: "arbitaryLine",
-        afterDatasetsDraw(chart, args, pluginOptions) {
+        afterDatasetsDraw(chart:any, args:any, pluginOptions:any) {
             const { ctx, chartArea: { top, bottom, left, right, width, height }, scales: { x, y } } = chart;
             ctx.save();
             ctx.beginPath();
@@ -126,12 +126,11 @@ export default function Chart({ }: ChartProps) {
             <div style={{ height: "50%", width: "50%" }}>
                 <Line ref={ref} onClick={(e) => {
                     let temp = JSON.parse(JSON.stringify(data));
-                    console.log(getElementAtEvent(ref.current, e));
-                    if (getElementAtEvent(ref.current, e).length > 0) {
-                        temp.datasets[0].data = datas.slice(0, getElementAtEvent(ref.current, e)[0]?.index + 1);
+                    if (getElementAtEvent(ref.current as any, e).length > 0) {
+                        temp.datasets[0].data = datas.slice(0, getElementAtEvent(ref.current as any, e)[0]?.index + 1);
                     }
                     setData(temp);
-                }} options={options} data={data} />
+                }} options={options as any} data={data} />
             </div>
         </div>
     )

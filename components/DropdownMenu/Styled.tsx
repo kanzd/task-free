@@ -21,20 +21,20 @@ export const DropdownMenuInnerTitle = styled.div`
   flex-direction: column;
   justify-content: center;
   margin: 0 0 0 8px;
-  font-weight: ${props => props?.isActive ? "600" : "400"};
+  font-weight: ${(props:any) => props?.isActive ? "600" : "400"};
 `;
 
-export const DropdownMenuInner = styled.div`
+export const DropdownMenuInner:any = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 12px 16px;
   border-radius: 8px;
   cursor: pointer;
-  background-color: ${props => props?.isActive ? "#62208D" : "transparent"};
+  background-color: ${(props:any) => props?.isActive ? "#62208D" : "transparent"};
 `;
 
-export const DropdownMenuTrailing = styled.div`
+export const DropdownMenuTrailing:any = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
