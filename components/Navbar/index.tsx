@@ -5,54 +5,54 @@ import Settings from "../../assets/setting-2.svg";
 import Image from 'next/image';
 import Avatar from "../../assets/Ellipse 1.svg";
 import UpArrow from "../../assets/Frame (5).svg";
-interface NavbarProps{
+import * as Styled from "./styled";
+interface NavbarProps {
 
 }
 
-export default function Navbar({}:NavbarProps) {
-  return (
-    <div className={Styles.navbarRoot}>
-        <div className={Styles.navbarTitle}>
-            <div className={Styles.navbarHeading}>
-                Welcome, Stacia!
-            </div>
-            <div className={Styles.navbarSubheading}>
-            Today is sports day
-            </div>
-        </div>
-        <div className={Styles.navbarTralingPart}>
-        <div className={Styles.navbarNotification}>
-            <div className={Styles.navbarNotificationInner}>
-                <Image src={Notification} height={24} width={24} alt={""}></Image>
-            </div>
-        </div>
-        <div className={Styles.navbarSettings}>
-            <div className={Styles.navbarNotificationInner}>
-                <Image src={Settings} height={24} width={24} alt={""}></Image>
-            </div>
-        </div>
-        <div className={Styles.navbarWrapper}>
-        <div className={Styles.navbarBorder}>
-
-        </div>
-        </div>
-        <div className={Styles.navbarAvatar}>
-            <div>
-                <Image src={Avatar} height={48} width={48} alt={''}></Image>
-            </div>
-            <div className={Styles.userWrapper}>
-                <div className={Styles.userHeading}>
-                Terry Stacia
-                </div>
-                <div className={Styles.userSubheading}>
-                MU Bwoey
-                </div>
-            </div>
-            <div className={Styles.navbarAvatarTraling}>
-                <Image src={UpArrow} height={24} width={24} alt={''}></Image>
-            </div>
-        </div>
-        </div>
-    </div>
-  )
+export default function Navbar({ }: NavbarProps) {
+    return (
+        <Styled.NavbarRoot>
+            <Styled.NavbarTitle>
+                <Styled.NavbarHeading>
+                    Welcome, Stacia!
+                </Styled.NavbarHeading>
+                <Styled.NavbarSubheading>
+                    Today is sports day
+                </Styled.NavbarSubheading>
+            </Styled.NavbarTitle>
+            <Styled.NavbarTrailingPart>
+                <Styled.NavbarNotification>
+                    <Styled.NavbarNotificationInner>
+                        <Image src={Notification} height={24} width={24} alt={""}></Image>
+                    </Styled.NavbarNotificationInner>
+                </Styled.NavbarNotification>
+                <Styled.NavbarSettings>
+                    <Styled.NavbarNotificationInner>
+                        <Image src={Settings} height={24} width={24} alt={""}></Image>
+                    </Styled.NavbarNotificationInner>
+                </Styled.NavbarSettings>
+                <Styled.NavbarWrapper>
+                    <Styled.NavbarBorder>
+                    </Styled.NavbarBorder>
+                </Styled.NavbarWrapper>
+                <Styled.NavbarAvatar>
+                    <div>
+                        <Image src={Avatar} height={48} width={48} alt={''}></Image>
+                    </div>
+                    <Styled.UserWrapper>
+                        <Styled.UserHeading>
+                            Terry Stacia
+                        </Styled.UserHeading>
+                        <Styled.UserSubheading>
+                            MU Bwoey
+                        </Styled.UserSubheading>
+                    </Styled.UserWrapper>
+                    <Styled.NavbarAvatarTrailing>
+                        <Image src={UpArrow} height={24} width={24} alt={''}></Image>
+                    </Styled.NavbarAvatarTrailing>
+                </Styled.NavbarAvatar>
+            </Styled.NavbarTrailingPart>
+        </Styled.NavbarRoot>
+    )
 }

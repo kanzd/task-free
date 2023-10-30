@@ -1,4 +1,4 @@
-import React, { useState,useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import Styles from "../../styles/sidemenu.module.css";
 import Logo from "../../assets/Frame (1).svg";
 import DropdownMenu, { DropdownMenuList } from '../DropdownMenu';
@@ -9,32 +9,33 @@ import Team2 from "../../assets/Ellipse 3 copy.svg";
 import Team3 from "../../assets/Ellipse 4 copy.svg";
 import Team4 from "../../assets/Ellipse 3.svg";
 import { RootContext } from "../../pages/home";
+import * as Styled from "./styled";
 interface SideMenuProps {
     title: string
 }
 
 export default function Sidemenu({ title }: SideMenuProps) {
     const [isActiveState, setIsActiveState] = useState([true, false, false, false]);
-    const {currentOption,setCurrentOption} = useContext(RootContext);
+    const { currentOption, setCurrentOption } = useContext(RootContext);
     return (
-        <div className={Styles.sidemenuRoot}>
-            <div className={Styles.sidemenuTitle}>
+        <Styled.SideMenuRoot>
+            <Styled.SideMenuTitle>
                 <Image src={Logo} height={30} width={30} alt={''}></Image>
-                <div className={Styles.sidemenuTitleText}>
+                <Styled.SideMenuTitleText>
                     {title}
-                </div>
-            </div>
-            <div className={Styles.dropdownSection}>
-                <div className={Styles.sidemenuDropdownTitle}>
+                </Styled.SideMenuTitleText>
+            </Styled.SideMenuTitle>
+            <Styled.DropdownSection>
+                <Styled.SideMenuDropdownTitle>
                     Sports
-                </div>
+                </Styled.SideMenuDropdownTitle>
                 <DropdownMenu onClick={() => {
                     setCurrentOption("option1")
                     const temp = [...isActiveState];
                     temp[0] = !temp[0];
-                    temp[1]=false;
-                    temp[2]=false;
-                    temp[3]=false;
+                    temp[1] = false;
+                    temp[2] = false;
+                    temp[3] = false;
                     setIsActiveState(temp);
                 }} isActive={isActiveState[0]} leadingIcon={Football} title={"Football"}>
                     <DropdownMenuList leadingIcon={Team1} title='La Liga'></DropdownMenuList>
@@ -46,9 +47,9 @@ export default function Sidemenu({ title }: SideMenuProps) {
                     setCurrentOption("option2")
                     const temp = [...isActiveState];
                     temp[1] = !temp[1];
-                    temp[0]=false;
-                    temp[2]=false;
-                    temp[3]=false;
+                    temp[0] = false;
+                    temp[2] = false;
+                    temp[3] = false;
                     setIsActiveState(temp);
                 }} isActive={isActiveState[1]} leadingIcon={Football} title={"Football"}>
                     <DropdownMenuList leadingIcon={Team1} title='La Liga'></DropdownMenuList>
@@ -56,8 +57,7 @@ export default function Sidemenu({ title }: SideMenuProps) {
                     <DropdownMenuList leadingIcon={Team2} title="UEFA Champions"></DropdownMenuList>
                     <DropdownMenuList leadingIcon={Team4} title='Eredevise'></DropdownMenuList>
                 </DropdownMenu>
-                
-            </div>
-        </div>
+            </Styled.DropdownSection>
+        </Styled.SideMenuRoot>
     )
 }

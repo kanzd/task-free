@@ -19,6 +19,7 @@ import El from "../../assets/Ellipse 3.svg";
 import Liverpool from "../../assets/Ellipse 5 (3) copy.svg";
 import UEFA from "../../assets/Ellipse 3 copy.svg"
 import { RootContext } from '@/pages/home';
+import * as Styled from "./styled";
 interface MainProps {
 
 }
@@ -113,10 +114,10 @@ export default function Main({ }: MainProps) {
                 </div>}
             </>)
         }
-    }), []);
+    }), [isActive1, isActive2]);
     return (
-        <div className={Styles.mainRoot}>
-            {openChart && (<div className={Styles.popup}>
+        <Styled.MainRoot>
+            {openChart && (<Styled.Popup>
                 <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", margin: "10px 0", }}>
                     <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", backgroundColor: "rgb(98, 32, 141)", fontFamily: "Gilroy", width: "30%", borderRadius: "16px", fontSize: "16px", cursor: "pointer", height: "50px" }} onClick={() => {
                         setOpenChart(false);
@@ -124,14 +125,14 @@ export default function Main({ }: MainProps) {
                 </div>
                 <Chart></Chart>
 
-            </div>)}
+            </Styled.Popup>)}
             <Navbar ></Navbar>
-            <div className={Styles.mainInner}>
+            <Styled.MainInner>
                 <div>
                     <div>
-                        <div className={Styles.mainBanner}>
+                        <Styled.MainBanner>
                             <Image src={Banner} height={260} width={648} alt={''}></Image>
-                        </div>
+                        </Styled.MainBanner>
                     </div>
                     <div>
                         <Card Card2={leagueMap[currentOption].card2} Card1={leagueMap[currentOption].card1} onGraphClick={() => {
@@ -141,18 +142,17 @@ export default function Main({ }: MainProps) {
                         </Card>
                     </div>
                 </div>
-                <div className={Styles.mainInner2}>
+                <Styled.MainInner2>
                     <div>
                         <LiveCard Team1logo={leagueMap.livematch[currentOption].team1Logo} Team1Name={leagueMap.livematch[currentOption].team1Name} Team2Name={leagueMap.livematch[currentOption].team2Name} Team2logo={leagueMap.livematch[currentOption].team2Logo}></LiveCard>
                     </div>
                     <div>
-                        <div className={Styles.newsPannel}>
+                        <Styled.NewsPanel>
                             <Image src={LatestNews} height={460} width={360} alt=''></Image>
-                        </div>
+                        </Styled.NewsPanel>
                     </div>
-                </div>
-            </div>
-
-        </div>
+                </Styled.MainInner2>
+            </Styled.MainInner>
+        </Styled.MainRoot>
     )
 }

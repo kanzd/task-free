@@ -13,6 +13,7 @@ import innerStar from "../../assets/star-svgrepo-com.svg";
 import Barca from "../../assets/Ellipse 5.svg";
 import RealM from "../../assets/Ellipse 5 (1).svg";
 import { RootContext } from '@/pages/home';
+import * as Styled from "./styled";
 interface CardProps {
     onGraphClick: any;
     Card1: React.ReactElement | React.ReactElement[],
@@ -45,104 +46,102 @@ interface PillProps {
 }
 export function MatchDetail({ logo, title, subtitle, matchNumber, tralingIcon, onTralingClick }: CardDetailProps) {
     return (
-        <div className={Styles.matchDetailRoot} onClick={onTralingClick}>
-            <div className={Styles.matchDetaiLeadingElement}>
+        <Styled.MatchDetailRoot onClick={onTralingClick}>
+            <Styled.MatchDetailLeadingElement>
                 <div>
                     <Image src={logo} height={42} width={42} alt={''}></Image>
                 </div>
-                <div className={Styles.matchDetailText}>
-                    <div className={Styles.matchDetailHeading}>
+                <Styled.MatchDetailText>
+                    <Styled.MatchDetailHeading>
                         {title}
-                    </div>
-                    <div className={Styles.matchDetailSubText}>
-                        <div className={Styles.matchDetailSubTitle} style={{ margin: "0 8px 0 0" }}>
+                    </Styled.MatchDetailHeading>
+                    <Styled.MatchDetailSubText>
+                        <Styled.MatchDetailSubTitle side={"right"}>
                             {subtitle}
-                        </div>
+                        </Styled.MatchDetailSubTitle>
                         <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
                             <Image src={Dot} height={4} width={4} alt=''></Image>
                         </div>
-                        <div className={Styles.matchDetailSubTitle} style={{ margin: "0 0 0 8px" }}>
+                        <Styled.MatchDetailSubTitle side={"left"}>
                             {matchNumber}
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        </Styled.MatchDetailSubTitle>
+                    </Styled.MatchDetailSubText>
+                </Styled.MatchDetailText>
+            </Styled.MatchDetailLeadingElement>
             <div style={{ cursor: "pointer" }}>
                 <Image src={tralingIcon} height={20} width={20} alt={''}></Image>
             </div>
-        </div>
+        </Styled.MatchDetailRoot>
     );
 }
 export function MatchListTile({ time, team1, team2, team1logo, team2logo, team1Score, team2Score, timeColor, border, onGraphClick, index }: MatchListTile) {
     const [fav, setFav] = useState(false);
     const { currentOption, setCurrentOption } = useContext(RootContext);
     return (
-        <div className={Styles.listTileWrapper}>
-            <div className={Styles.listTileRoot} style={{ borderWidth: border ? "1px" : "0px" }}>
-                <div className={Styles.listTileStar} onClick={() => {
-                    window?.localStorage?.setItem(currentOption+index.toString(), (window?.localStorage?.getItem(currentOption+index.toString()) === "true" ? "false" : "true"));
+        <Styled.ListTileWrapper>
+            <Styled.ListTileRoot border>
+                <Styled.ListTileStar onClick={() => {
+                    window?.localStorage?.setItem(currentOption + index.toString(), (window?.localStorage?.getItem(currentOption + index.toString()) === "true" ? "false" : "true"));
                     setFav(!fav);
                 }}>
-                    <Image src={(typeof window !== "undefined" && window?.localStorage?.getItem(currentOption+index.toString()) === "true") ? innerStar : Star} height={18} width={18} alt={''}></Image>
-                </div>
-                <div className={Styles.listTileTime} style={{ color: timeColor }}>
+                    <Image src={(typeof window !== "undefined" && window?.localStorage?.getItem(currentOption + index.toString()) === "true") ? innerStar : Star} height={18} width={18} alt={''}></Image>
+                </Styled.ListTileStar>
+                <Styled.ListTileTime color={timeColor}>
                     {time}
-                </div>
-                <div className={Styles.listTileTeam}>
+                </Styled.ListTileTime>
+                <Styled.ListTileTeam>
                     <div>
                         <Image src={team1logo} height={28} width={28} alt=''></Image>
                     </div>
-                    <div className={Styles.listTileTeamText}>
+                    <Styled.ListTileTeamText>
                         {team1}
-                    </div>
-                </div>
-                <div className={Styles.listTilePill}>
+                    </Styled.ListTileTeamText>
+                </Styled.ListTileTeam>
+                <Styled.ListTilePill>
                     <Pill number1={team1Score} number2={team2Score}></Pill>
-                </div>
-                <div className={Styles.listTileTeam}>
+                </Styled.ListTilePill>
+                <Styled.ListTileTeam>
                     <div>
                         <Image src={team2logo} height={28} width={28} alt=''></Image>
                     </div>
-                    <div className={Styles.listTileTeamText}>
+                    <Styled.ListTileTeamText>
                         {team2}
-                    </div>
-                </div>
-                <div className={Styles.listTileTraling1} onClick={onGraphClick}>
+                    </Styled.ListTileTeamText>
+                </Styled.ListTileTeam>
+                <Styled.ListTileTrailing1 onClick={onGraphClick}>
                     <Image src={statusUp} height={18} width={18} alt=''></Image>
-                </div>
+                </Styled.ListTileTrailing1>
                 <div className={Styles.listTileTraling2}>
                     <Image src={Grid9} height={18} width={18} alt=''></Image>
                 </div>
-            </div>
-        </div>
+            </Styled.ListTileRoot>
+        </Styled.ListTileWrapper>
     )
 }
 export function Pill({ number1, number2 }: PillProps) {
     return (
-        <div className={Styles.pillRoot}>
-            <div className={Styles.pillNumber}>
+        <Styled.PillRoot>
+            <Styled.PillNumber>
                 {number1}
-            </div>
+            </Styled.PillNumber>
             <div>
                 :
             </div>
-            <div className={Styles.pillNumber}>
+            <Styled.PillNumber>
                 {number2}
-            </div>
-        </div>
+            </Styled.PillNumber>
+        </Styled.PillRoot>
     )
 }
 export default function Card({ onGraphClick, Card1, Card2 }: CardProps) {
-    
+
     return (
-        <div className={Styles.cardRoot}>
-            <div className={Styles.cardHeading}>
+        <Styled.CardRoot>
+            <Styled.CardHeading>
                 Today Match
-            </div>
+            </Styled.CardHeading>
             {Card1}
             {Card2}
-
-
-        </div>
+        </Styled.CardRoot>
     )
 }
