@@ -20,7 +20,7 @@ export const Popup = styled.div`
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: #101828;
+  background-color: #1e1e1e;
   /* opacity: 0.8; */
   z-index: 1000000;
 `;
